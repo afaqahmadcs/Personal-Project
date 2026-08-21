@@ -63,16 +63,15 @@ export const Footer: React.FC = () => {
               {BRAND.location}
             </p>
             <div>
-              <span className="font-mono text-[9px] uppercase tracking-wider text-text-muted block">Inquiries:</span>
-              <span className="font-mono text-xs text-foreground">afaqahmad.contact</span>
-            </div>
-            <div>
               <span className="font-mono text-[9px] uppercase tracking-wider text-text-muted block">WhatsApp:</span>
               <a
                 href="https://wa.me/923189798577"
-                className="font-mono text-xs text-accent hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat with Afaq Ahmad on WhatsApp"
+                className="font-mono text-xs text-accent hover:underline font-bold"
               >
-                0318 9798577
+                +92 318 9798577
               </a>
             </div>
           </div>
@@ -91,6 +90,9 @@ export const Footer: React.FC = () => {
               </Link>
               <a
                 href="https://wa.me/923189798577"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat with Afaq Ahmad on WhatsApp"
                 className="group flex items-center space-x-1 font-sans text-xs text-text-muted hover:text-foreground transition-colors duration-300"
               >
                 <span>WhatsApp</span>
