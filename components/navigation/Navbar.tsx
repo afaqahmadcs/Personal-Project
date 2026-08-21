@@ -10,10 +10,11 @@ import { Sun, Moon, Menu } from "lucide-react";
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Work", href: "/work" },
   { label: "Capabilities", href: "/capabilities" },
+  { label: "Work", href: "/work" },
   { label: "AI × Creative", href: "/ai-creative" },
   { label: "Journey", href: "/journey" },
+  { label: "Content", href: "/content" },
   { label: "Contact", href: "/contact" },
 ];
 

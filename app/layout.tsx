@@ -16,6 +16,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+import { CustomCursor } from "@/components/ui/CustomCursor";
+
 export const metadata: Metadata = generateSEO();
 
 export default function RootLayout({
@@ -31,6 +33,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <ThemeProvider>
+          <CustomCursor />
           <Navbar />
           <main className="flex-grow flex flex-col">{children}</main>
           <Footer />

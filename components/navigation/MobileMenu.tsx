@@ -14,11 +14,12 @@ interface MobileMenuProps {
 const MENU_ITEMS = [
   { label: "Home", href: "/", number: "01" },
   { label: "About", href: "/about", number: "02" },
-  { label: "Work", href: "/work", number: "03" },
-  { label: "Capabilities", href: "/capabilities", number: "04" },
+  { label: "Capabilities", href: "/capabilities", number: "03" },
+  { label: "Work", href: "/work", number: "04" },
   { label: "AI × Creative", href: "/ai-creative", number: "05" },
   { label: "Journey", href: "/journey", number: "06" },
-  { label: "Contact", href: "/contact", number: "07" },
+  { label: "Content", href: "/content", number: "07" },
+  { label: "Contact", href: "/contact", number: "08" },
 ];
 
 export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, pathname }) => {
@@ -33,6 +34,17 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, pathnam
       document.body.style.overflow = "";
     };
   }, [isOpen]);
+
+  // Listen for Escape key to close mobile menu
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isOpen) {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, onClose]);
 
   return (
     <AnimatePresence>
