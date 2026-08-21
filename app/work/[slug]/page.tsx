@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!project) return {};
 
   return generateSEO({
-    title: project.title,
+    title: `${project.title} — Project Case Study`,
     description: project.shortDescription,
     path: `/work/${project.slug}`,
   });
@@ -65,17 +65,54 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
           {/* Details layout */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-16 border-t border-border-custom pt-12">
-            {/* Description context */}
-            <div className="lg:col-span-8 space-y-8">
+            
+            {/* Left Column: Narrative Sections */}
+            <div className="lg:col-span-8 space-y-12">
               <Reveal direction="up" delay={0.2}>
-                <h2 className="font-sans text-lg font-semibold text-text-muted">Overview</h2>
-                <p className="font-sans text-base leading-relaxed mt-2 text-foreground">
+                <h2 className="font-display text-xl uppercase text-text-muted mb-4">01 / Overview</h2>
+                <p className="font-sans text-base leading-relaxed text-foreground">
                   {project.shortDescription}
                 </p>
               </Reveal>
+
+              {project.problem && (
+                <Reveal direction="up" delay={0.25}>
+                  <h2 className="font-display text-xl uppercase text-text-muted mb-4">02 / The Context & Problem</h2>
+                  <p className="font-sans text-base leading-relaxed text-text-muted">
+                    {project.problem}
+                  </p>
+                </Reveal>
+              )}
+
+              {project.approach && (
+                <Reveal direction="up" delay={0.3}>
+                  <h2 className="font-display text-xl uppercase text-text-muted mb-4">03 / The Approach</h2>
+                  <p className="font-sans text-base leading-relaxed text-text-muted">
+                    {project.approach}
+                  </p>
+                </Reveal>
+              )}
+
+              {project.solution && (
+                <Reveal direction="up" delay={0.35}>
+                  <h2 className="font-display text-xl uppercase text-text-muted mb-4">04 / The Solution</h2>
+                  <p className="font-sans text-base leading-relaxed text-text-muted">
+                    {project.solution}
+                  </p>
+                </Reveal>
+              )}
+
+              {project.lessons && (
+                <Reveal direction="up" delay={0.4}>
+                  <h2 className="font-display text-xl uppercase text-text-muted mb-4">05 / Key Lessons</h2>
+                  <p className="font-sans text-base leading-relaxed text-text-muted">
+                    {project.lessons}
+                  </p>
+                </Reveal>
+              )}
             </div>
 
-            {/* Meta column */}
+            {/* Right Column: Meta Details */}
             <div className="lg:col-span-4 space-y-6">
               <Reveal direction="up" delay={0.3}>
                 <div className="border-b border-border-custom pb-4">
@@ -83,6 +120,24 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                   <p className="font-sans text-sm font-semibold mt-1">{project.role}</p>
                 </div>
               </Reveal>
+
+              {project.year && (
+                <Reveal direction="up" delay={0.35}>
+                  <div className="border-b border-border-custom pb-4">
+                    <h3 className="font-mono text-[10px] uppercase tracking-wider text-text-muted">Year</h3>
+                    <p className="font-sans text-sm font-semibold mt-1">{project.year}</p>
+                  </div>
+                </Reveal>
+              )}
+
+              {project.client && (
+                <Reveal direction="up" delay={0.38}>
+                  <div className="border-b border-border-custom pb-4">
+                    <h3 className="font-mono text-[10px] uppercase tracking-wider text-text-muted">Client</h3>
+                    <p className="font-sans text-sm font-semibold mt-1">{project.client}</p>
+                  </div>
+                </Reveal>
+              )}
 
               <Reveal direction="up" delay={0.4}>
                 <div className="border-b border-border-custom pb-4">
@@ -112,6 +167,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 </div>
               </Reveal>
             </div>
+
           </div>
         </div>
       </section>
