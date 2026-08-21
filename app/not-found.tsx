@@ -32,14 +32,17 @@ export default function NotFound() {
               PAGE NOT FOUND.
             </h1>
             <p className="font-sans text-xs text-text-muted max-w-xs mx-auto leading-relaxed mt-4">
-              The segment or documentation page you are trying to access does not exist or has been shifted.
+              The page you&apos;re looking for doesn&apos;t exist.
             </p>
           </Reveal>
 
           <Reveal direction="up" delay={0.2}>
-            <div className="pt-6">
+            <div className="flex flex-wrap justify-center gap-4 pt-6">
               <Link href="/">
-                <Button variant="primary">Back Home &rarr;</Button>
+                <Button variant="primary">BACK HOME &rarr;</Button>
+              </Link>
+              <Link href="/work">
+                <Button variant="secondary">VIEW WORK &rarr;</Button>
               </Link>
             </div>
           </Reveal>

@@ -2,235 +2,260 @@
 
 import React from "react";
 import { Reveal } from "@/components/motion/Reveal";
+import { Link } from "@/components/ui/Link";
+import { Button } from "@/components/ui/Button";
 
 export const CapabilityBlock: React.FC = () => {
   return (
     <section className="relative w-full py-16 md:py-24 bg-surface-muted/20 border-t border-border-custom" aria-label="Afaq Ahmad Capabilities">
-      <div className="mx-auto max-w-7xl px-6 md:px-12 space-y-28 md:space-y-40">
+      <div className="mx-auto max-w-7xl px-6 md:px-12 space-y-24 md:space-y-36">
         
-        {/* CAPABILITY 01: BUILD */}
+        {/* CAPABILITY 01: PORTFOLIO WEBSITES */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Visual column (Architectural sculpture) */}
           <div className="lg:col-span-6 xl:col-span-7 flex justify-center lg:justify-start order-2 lg:order-1">
             <Reveal direction="up" delay={0.1}>
               <div className="relative w-full max-w-md aspect-video border border-border-custom bg-background rounded-lg flex items-center justify-center shadow-lg group overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,89,255,0.05)_0%,transparent_75%)]" />
-                <svg className="w-48 h-48 text-text-muted/30 transition-transform duration-1000 group-hover:rotate-6 group-hover:scale-105" viewBox="0 0 100 100" fill="none">
-                  {/* Wireframe grids representing architectural blueprint */}
-                  <g className="opacity-20">
-                    <line x1="10" y1="50" x2="90" y2="50" stroke="currentColor" strokeWidth="0.5" />
-                    <line x1="50" y1="10" x2="50" y2="90" stroke="currentColor" strokeWidth="0.5" />
-                  </g>
-                  {/* Isometric box wireframe */}
-                  <path d="M50 20 L80 35 L80 65 L50 80 L20 65 L20 35 Z" stroke="currentColor" strokeWidth="0.75" />
-                  <path d="M50 20 L50 80" stroke="currentColor" strokeWidth="0.75" />
-                  <path d="M20 35 L50 50 L80 35" stroke="currentColor" strokeWidth="0.75" />
-                  {/* Translucent glass face */}
-                  <polygon points="50,20 80,35 50,50 20,35" fill="var(--color-surface)" fillOpacity="0.3" stroke="currentColor" strokeWidth="0.5" />
-                  {/* Illuminated nodes */}
-                  <circle cx="50" cy="50" r="2" fill="var(--color-accent)" className="animate-ping" />
-                  <circle cx="50" cy="50" r="1.5" fill="var(--color-accent)" />
-                  <circle cx="50" cy="20" r="1.5" fill="var(--color-accent)" />
-                  <circle cx="80" cy="65" r="1.5" fill="var(--color-accent)" />
-                  <circle cx="20" cy="65" r="1.5" fill="var(--color-accent)" />
+                <svg className="w-36 h-36 text-text-muted/30 transition-transform duration-1000 group-hover:scale-105" viewBox="0 0 100 100" fill="none">
+                  <path d="M15 20 H85 V70 H15 Z" stroke="currentColor" strokeWidth="0.75" />
+                  <path d="M30 70 V80 H70 V70" stroke="currentColor" strokeWidth="0.75" />
+                  <path d="M25 80 H75" stroke="currentColor" strokeWidth="0.75" />
+                  <line x1="25" y1="30" x2="75" y2="30" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
+                  <circle cx="50" cy="50" r="8" stroke="currentColor" strokeWidth="0.5" />
                 </svg>
                 <div className="absolute bottom-3 left-4">
-                  <span className="font-mono text-[9px] uppercase tracking-widest text-text-muted">CAP-01 / BUILD-STR</span>
+                  <span className="font-mono text-[9px] uppercase tracking-widest text-text-muted">CAP-01 / PORTFOLIO</span>
                 </div>
               </div>
             </Reveal>
           </div>
           
-          {/* Content Column */}
           <div className="lg:col-span-6 xl:col-span-5 space-y-6 order-1 lg:order-2">
             <Reveal direction="up" delay={0.15}>
-              <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">01 / Code & Systems</span>
-              <h2 className="font-display text-4xl sm:text-5xl uppercase tracking-tight mt-2">
-                BUILD
+              <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">01 / Personal Branding</span>
+              <h2 className="font-display text-3xl sm:text-4xl uppercase tracking-tight mt-2">
+                PORTFOLIO WEBSITES
               </h2>
               <p className="font-sans text-sm text-text-muted leading-relaxed">
-                Modern responsive websites and digital experiences built using clean full-stack logic. Interfacing databases with client frontends to deploy fast, reliable portals.
+                Bespoke, high-performance portfolio sites crafted to build personal authority and showcase developer proof. Custom-designed typography systems with highly fluid page transitions.
               </p>
             </Reveal>
 
-            {/* List details */}
             <div className="space-y-4 pt-4 border-t border-border-custom/50">
               <Reveal direction="up" delay={0.2}>
                 <div className="flex flex-wrap gap-1.5">
-                  {["Portfolio Websites", "Business Websites", "Landing Pages", "Responsive Websites", "Frontend Development", "Full Stack Development", "AI-Assisted Development"].map((val) => (
-                    <span key={val} className="font-mono text-[9px] uppercase border border-border-custom/80 px-2 py-0.5 rounded bg-surface-muted text-text-muted">
+                  {["Personal Sites", "Editorial Archives", "Interactive Portfolios", "Responsive Visuals"].map((val) => (
+                    <span key={val} className="font-mono text-[9px] uppercase border border-border-custom/80 px-2 py-0.5 rounded bg-surface text-text-muted">
                       {val}
                     </span>
                   ))}
                 </div>
               </Reveal>
-
               <Reveal direction="up" delay={0.25}>
-                <div className="space-y-1">
-                  <span className="font-mono text-[9px] uppercase tracking-wider text-text-muted">Preferred Stack</span>
-                  <div className="flex flex-wrap gap-1">
-                    {["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"].map((tech) => (
-                      <span key={tech} className="font-mono text-[9px] uppercase text-foreground font-semibold px-2">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                <Link href="/work">
+                  <Button variant="secondary" className="text-xs">VIEW SELECTED PORTFOLIOS &rarr;</Button>
+                </Link>
               </Reveal>
             </div>
           </div>
         </div>
 
-        {/* CAPABILITY 02: DESIGN */}
+        {/* CAPABILITY 02: BUSINESS WEBSITES */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Content Column */}
           <div className="lg:col-span-6 xl:col-span-5 space-y-6 order-1">
             <Reveal direction="up" delay={0.15}>
-              <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">02 / Interface & Balance</span>
-              <h2 className="font-display text-4xl sm:text-5xl uppercase tracking-tight mt-2">
-                DESIGN
+              <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">02 / Corporate Showcase</span>
+              <h2 className="font-display text-3xl sm:text-4xl uppercase tracking-tight mt-2">
+                BUSINESS WEBSITES
               </h2>
               <p className="font-sans text-sm text-text-muted leading-relaxed">
-                Designing clean digital interfaces, custom layout files, and balanced visual designs. Structuring components with strict grid parameters and high responsiveness.
+                Premium corporate interfaces designed to present services, showcase products, and optimize contact conversion metrics. Clean code structures engineered for fast loading speeds.
               </p>
             </Reveal>
 
-            <div className="space-y-3 pt-4 border-t border-border-custom/50">
+            <div className="space-y-4 pt-4 border-t border-border-custom/50">
               <Reveal direction="up" delay={0.2}>
                 <div className="flex flex-wrap gap-1.5">
-                  {["UI/UX Design", "Figma Prototyping", "Responsive Interface Design", "Visual Direction", "Thumbnail Design"].map((val) => (
-                    <span key={val} className="font-mono text-[9px] uppercase border border-border-custom/80 px-2 py-0.5 rounded bg-surface-muted text-text-muted">
+                  {["Corporate Portals", "Showcase Sites", "Dynamic Catalogues", "Product Landing Pages"].map((val) => (
+                    <span key={val} className="font-mono text-[9px] uppercase border border-border-custom/80 px-2 py-0.5 rounded bg-surface text-text-muted">
                       {val}
                     </span>
                   ))}
                 </div>
               </Reveal>
+              <Reveal direction="up" delay={0.25}>
+                <Link href="/work">
+                  <Button variant="secondary" className="text-xs">VIEW BUSINESS PROJECTS &rarr;</Button>
+                </Link>
+              </Reveal>
             </div>
           </div>
 
-          {/* Visual column (Geometric composition) */}
           <div className="lg:col-span-6 xl:col-span-7 flex justify-center lg:justify-end order-2">
             <Reveal direction="up" delay={0.1}>
               <div className="relative w-full max-w-md aspect-video border border-border-custom bg-background rounded-lg flex items-center justify-center shadow-lg group overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,89,255,0.02)_0%,transparent_75%)]" />
-                <svg className="w-48 h-48 text-text-muted/30 transition-transform duration-1000 group-hover:-rotate-6" viewBox="0 0 100 100" fill="none">
-                  {/* Overlapping lines & circle frames (Grid balance) */}
-                  <line x1="20" y1="20" x2="80" y2="80" stroke="currentColor" strokeWidth="0.5" />
-                  <line x1="80" y1="20" x2="20" y2="80" stroke="currentColor" strokeWidth="0.5" strokeDasharray="1 3" />
-                  <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="0.75" />
-                  <circle cx="50" cy="50" r="15" stroke="currentColor" strokeWidth="0.5" strokeDasharray="3 2" />
-                  {/* Aesthetic grid markers */}
-                  <rect x="35" y="35" width="30" height="30" stroke="currentColor" strokeWidth="0.75" />
-                  <circle cx="50" cy="50" r="2" fill="var(--color-accent)" />
+                <svg className="w-36 h-36 text-text-muted/30 transition-transform duration-1000 group-hover:scale-105" viewBox="0 0 100 100" fill="none">
+                  <rect x="20" y="25" width="60" height="40" stroke="currentColor" strokeWidth="0.75" />
+                  <line x1="20" y1="35" x2="80" y2="35" stroke="currentColor" strokeWidth="0.5" />
+                  <circle cx="28" cy="30" r="1.5" fill="currentColor" />
+                  <circle cx="34" cy="30" r="1.5" fill="currentColor" />
+                  <circle cx="40" cy="30" r="1.5" fill="currentColor" />
+                  <line x1="30" y1="45" x2="70" y2="45" stroke="currentColor" strokeWidth="0.5" />
+                  <line x1="30" y1="53" x2="60" y2="53" stroke="currentColor" strokeWidth="0.5" />
                 </svg>
                 <div className="absolute bottom-3 left-4">
-                  <span className="font-mono text-[9px] uppercase tracking-widest text-text-muted">CAP-02 / DSN-GRID</span>
+                  <span className="font-mono text-[9px] uppercase tracking-widest text-text-muted">CAP-02 / BUSINESS</span>
                 </div>
               </div>
             </Reveal>
           </div>
         </div>
 
-        {/* CAPABILITY 03: AI */}
+        {/* CAPABILITY 03: AI INTEGRATION */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Visual column (Generative networks) */}
           <div className="lg:col-span-6 xl:col-span-7 flex justify-center lg:justify-start order-2 lg:order-1">
             <Reveal direction="up" delay={0.1}>
               <div className="relative w-full max-w-md aspect-video border border-border-custom bg-background rounded-lg flex items-center justify-center shadow-lg group overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,89,255,0.08)_0%,transparent_75%)]" />
-                <svg className="w-48 h-48 text-text-muted/30 transition-transform duration-1000 group-hover:scale-105" viewBox="0 0 100 100" fill="none">
-                  {/* Curved network layers */}
-                  <path d="M20 50 Q50 20 80 50" stroke="currentColor" strokeWidth="0.75" />
-                  <path d="M20 50 Q50 80 80 50" stroke="currentColor" strokeWidth="0.75" />
-                  <path d="M20 50 H80" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
-                  <path d="M50 20 V80" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
-                  
-                  {/* Glass shell circles */}
-                  <circle cx="50" cy="50" r="20" stroke="currentColor" strokeWidth="0.5" fill="var(--color-surface)" fillOpacity="0.2" />
-                  {/* Core glowing node */}
+                <svg className="w-36 h-36 text-text-muted/30 transition-transform duration-1000 group-hover:scale-105" viewBox="0 0 100 100" fill="none">
+                  <path d="M30 50 A20 20 0 1 0 70 50 A20 20 0 1 0 30 50" stroke="currentColor" strokeWidth="0.75" />
+                  <path d="M40 50 H60" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
+                  <path d="M50 40 V60" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
                   <circle cx="50" cy="50" r="3" fill="var(--color-accent)" className="animate-pulse" />
-                  <circle cx="35" cy="35" r="1.5" fill="var(--color-accent)" />
-                  <circle cx="65" cy="65" r="1.5" fill="var(--color-accent)" />
                 </svg>
                 <div className="absolute bottom-3 left-4">
-                  <span className="font-mono text-[9px] uppercase tracking-widest text-text-muted">CAP-03 / AI-PROMPTS</span>
+                  <span className="font-mono text-[9px] uppercase tracking-widest text-text-muted">CAP-03 / AI-INTEG</span>
                 </div>
               </div>
             </Reveal>
           </div>
           
-          {/* Content Column */}
           <div className="lg:col-span-6 xl:col-span-5 space-y-6 order-1 lg:order-2">
             <Reveal direction="up" delay={0.15}>
               <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">03 / Intelligent Automation</span>
-              <h2 className="font-display text-4xl sm:text-5xl uppercase tracking-tight mt-2">
-                AI
+              <h2 className="font-display text-3xl sm:text-4xl uppercase tracking-tight mt-2">
+                AI INTEGRATION
               </h2>
               <p className="font-sans text-sm text-text-muted leading-relaxed">
-                Integrating AI practically as an accelerator for development and content generation. Applying structured prompt engineering and LLM integrations to enhance real-world coding speed and automate creative workflows.
+                Implementing AI practically as an accelerator for content production and web automation. Utilizing structured prompt architectures and API layers to configure tools tailored for workflows.
               </p>
             </Reveal>
 
-            <div className="space-y-3 pt-4 border-t border-border-custom/50">
+            <div className="space-y-4 pt-4 border-t border-border-custom/50">
               <Reveal direction="up" delay={0.2}>
                 <div className="flex flex-wrap gap-1.5">
-                  {["AI-assisted development", "Prompt engineering", "AI image generation", "AI video experimentation", "AI creative workflows"].map((val) => (
-                    <span key={val} className="font-mono text-[9px] uppercase border border-border-custom/80 px-2 py-0.5 rounded bg-surface-muted text-text-muted">
+                  {["API Integrations", "Workflow Automation", "LLM Configurations", "Prompt Engineering"].map((val) => (
+                    <span key={val} className="font-mono text-[9px] uppercase border border-border-custom/80 px-2 py-0.5 rounded bg-surface text-text-muted">
                       {val}
                     </span>
                   ))}
                 </div>
+              </Reveal>
+              <Reveal direction="up" delay={0.25}>
+                <Link href="/ai-creative">
+                  <Button variant="secondary" className="text-xs">EXPLORE AI &times; CREATIVE &rarr;</Button>
+                </Link>
               </Reveal>
             </div>
           </div>
         </div>
 
-        {/* CAPABILITY 04: CREATE */}
+        {/* CAPABILITY 04: UI/UX DESIGN */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Content Column */}
           <div className="lg:col-span-6 xl:col-span-5 space-y-6 order-1">
             <Reveal direction="up" delay={0.15}>
-              <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">04 / Content & Media</span>
-              <h2 className="font-display text-4xl sm:text-5xl uppercase tracking-tight mt-2">
-                CREATE
+              <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">04 / Interface Balance</span>
+              <h2 className="font-display text-3xl sm:text-4xl uppercase tracking-tight mt-2">
+                UI/UX DESIGN
               </h2>
               <p className="font-sans text-sm text-text-muted leading-relaxed">
-                Producing digital content and technical logs beyond coding files. Formatting thumbnail designs, script guides, video production pacing, and exploring creative AI models.
+                Structuring digital interface grids and wireframe maps in Figma before writing code. Aligning components around typography scales, fluid spaces, and stable layouts.
               </p>
             </Reveal>
 
-            <div className="space-y-3 pt-4 border-t border-border-custom/50">
+            <div className="space-y-4 pt-4 border-t border-border-custom/50">
               <Reveal direction="up" delay={0.2}>
                 <div className="flex flex-wrap gap-1.5">
-                  {["YouTube Content", "Video Editing", "Thumbnail Design", "Visual Content", "Creative AI Experiments"].map((val) => (
-                    <span key={val} className="font-mono text-[9px] uppercase border border-border-custom/80 px-2 py-0.5 rounded bg-surface-muted text-text-muted">
+                  {["Figma Mapping", "Typography Scales", "Responsive Grids", "Component Systems"].map((val) => (
+                    <span key={val} className="font-mono text-[9px] uppercase border border-border-custom/80 px-2 py-0.5 rounded bg-surface text-text-muted">
                       {val}
                     </span>
                   ))}
                 </div>
               </Reveal>
+              <Reveal direction="up" delay={0.25}>
+                <Link href="/work">
+                  <Button variant="secondary" className="text-xs">VIEW DESIGN SAMPLES &rarr;</Button>
+                </Link>
+              </Reveal>
             </div>
           </div>
 
-          {/* Visual column (Layered media composition) */}
           <div className="lg:col-span-6 xl:col-span-7 flex justify-center lg:justify-end order-2">
             <Reveal direction="up" delay={0.1}>
               <div className="relative w-full max-w-md aspect-video border border-border-custom bg-background rounded-lg flex items-center justify-center shadow-lg group overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,89,255,0.02)_0%,transparent_75%)]" />
-                <svg className="w-48 h-48 text-text-muted/30 transition-transform duration-1000 group-hover:scale-105" viewBox="0 0 100 100" fill="none">
-                  {/* Layered stack rectangles representing video frames/timelines */}
-                  <rect x="20" y="30" width="50" height="30" stroke="currentColor" strokeWidth="0.75" fill="var(--color-surface)" fillOpacity="0.2" />
-                  <rect x="30" y="40" width="50" height="30" stroke="currentColor" strokeWidth="0.75" fill="var(--color-surface)" fillOpacity="0.4" />
-                  <rect x="40" y="50" width="40" height="25" stroke="currentColor" strokeWidth="0.75" fill="var(--color-surface)" fillOpacity="0.6" />
-                  {/* Timeline playhead */}
-                  <line x1="60" y1="20" x2="60" y2="80" stroke="var(--color-accent)" strokeWidth="1" />
-                  <polygon points="57,20 63,20 60,25" fill="var(--color-accent)" />
+                <svg className="w-36 h-36 text-text-muted/30 transition-transform duration-1000 group-hover:scale-105" viewBox="0 0 100 100" fill="none">
+                  <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="0.75" />
+                  <rect x="35" y="35" width="30" height="30" stroke="currentColor" strokeWidth="0.5" strokeDasharray="3 3" />
+                  <line x1="20" y1="50" x2="80" y2="50" stroke="currentColor" strokeWidth="0.5" />
+                  <line x1="50" y1="20" x2="50" y2="80" stroke="currentColor" strokeWidth="0.5" />
                 </svg>
                 <div className="absolute bottom-3 left-4">
-                  <span className="font-mono text-[9px] uppercase tracking-widest text-text-muted">CAP-04 / CRT-STACK</span>
+                  <span className="font-mono text-[9px] uppercase tracking-widest text-text-muted">CAP-04 / UIUX-DSN</span>
                 </div>
               </div>
             </Reveal>
+          </div>
+        </div>
+
+        {/* CAPABILITY 05: CREATIVE TECHNOLOGY */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-6 xl:col-span-7 flex justify-center lg:justify-start order-2 lg:order-1">
+            <Reveal direction="up" delay={0.1}>
+              <div className="relative w-full max-w-md aspect-video border border-border-custom bg-background rounded-lg flex items-center justify-center shadow-lg group overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,89,255,0.08)_0%,transparent_75%)]" />
+                <svg className="w-36 h-36 text-text-muted/30 transition-transform duration-1000 group-hover:scale-105" viewBox="0 0 100 100" fill="none">
+                  <rect x="25" y="25" width="50" height="50" stroke="currentColor" strokeWidth="0.75" />
+                  <line x1="25" y1="25" x2="75" y2="75" stroke="currentColor" strokeWidth="0.5" />
+                  <line x1="75" y1="25" x2="25" y2="75" stroke="currentColor" strokeWidth="0.5" />
+                  <circle cx="50" cy="50" r="10" stroke="var(--color-accent)" strokeWidth="1" fill="var(--color-surface)" />
+                </svg>
+                <div className="absolute bottom-3 left-4">
+                  <span className="font-mono text-[9px] uppercase tracking-widest text-text-muted">CAP-05 / CREATIVE</span>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+          
+          <div className="lg:col-span-6 xl:col-span-5 space-y-6 order-1 lg:order-2">
+            <Reveal direction="up" delay={0.15}>
+              <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">05 / Interactive Labs</span>
+              <h2 className="font-display text-3xl sm:text-4xl uppercase tracking-tight mt-2">
+                CREATIVE TECHNOLOGY
+              </h2>
+              <p className="font-sans text-sm text-text-muted leading-relaxed">
+                Exploring three-dimensional models, rich visual components, and custom CSS setups to bring interfaces to life. Combining technical scripts with web layouts.
+              </p>
+            </Reveal>
+
+            <div className="space-y-4 pt-4 border-t border-border-custom/50">
+              <Reveal direction="up" delay={0.2}>
+                <div className="flex flex-wrap gap-1.5">
+                  {["WebGL Explorations", "CSS Sculptures", "Rich Animations", "Interactive Prototypes"].map((val) => (
+                    <span key={val} className="font-mono text-[9px] uppercase border border-border-custom/80 px-2 py-0.5 rounded bg-surface text-text-muted">
+                      {val}
+                    </span>
+                  ))}
+                </div>
+              </Reveal>
+              <Reveal direction="up" delay={0.25}>
+                <Link href="/ai-creative">
+                  <Button variant="secondary" className="text-xs">EXPLORE EXPERIMENTS &rarr;</Button>
+                </Link>
+              </Reveal>
+            </div>
           </div>
         </div>
 

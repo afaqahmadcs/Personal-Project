@@ -51,11 +51,12 @@ export const AboutClosing: React.FC = () => {
             </Reveal>
 
             <Reveal direction="up" delay={0.25}>
-              <div className="pt-4">
+              <div className="flex flex-wrap items-center gap-4 pt-4">
                 <Link href="/work">
-                  <Button variant="primary" className="px-6 py-3">
-                    Explore What I Build
-                  </Button>
+                  <Button variant="primary">EXPLORE MY WORK &rarr;</Button>
+                </Link>
+                <Link href="/contact">
+                  <Button variant="secondary">START A PROJECT &rarr;</Button>
                 </Link>
               </div>
             </Reveal>

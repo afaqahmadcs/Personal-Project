@@ -152,10 +152,10 @@ export const FutureDirection: React.FC = () => {
           <Reveal direction="up" delay={0.15}>
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 border-t border-border-custom w-full max-w-md justify-center">
               <Link href="/work">
-                <Button variant="primary">View My Work</Button>
+                <Button variant="primary">SEE WHAT I&apos;M BUILDING &rarr;</Button>
               </Link>
-              <Link href="/about">
-                <Button variant="secondary">About Afaq</Button>
+              <Link href="/contact">
+                <Button variant="secondary">START A PROJECT &rarr;</Button>
               </Link>
             </div>
           </Reveal>

@@ -44,13 +44,13 @@ export const Hero: React.FC = () => {
 
             <Reveal direction="up" delay={0.2}>
               <p className="font-mono text-xs uppercase tracking-widest text-accent font-bold">
-                {BRAND.title}
+                AI &amp; Full Stack Developer
               </p>
             </Reveal>
 
             <Reveal direction="up" delay={0.3}>
               <p className="font-sans text-lg md:text-xl text-text-muted max-w-xl leading-relaxed">
-                I build modern digital experiences, explore AI, and learn by building real projects.
+                Building modern digital experiences at the intersection of web, AI, design, and creative technology.
               </p>
             </Reveal>
 
@@ -58,10 +58,10 @@ export const Hero: React.FC = () => {
             <Reveal direction="up" delay={0.4}>
               <div className="flex flex-wrap items-center gap-4 pt-4">
                 <Link href="/work">
-                  <Button variant="primary">View My Work</Button>
+                  <Button variant="primary">VIEW MY WORK &rarr;</Button>
                 </Link>
-                <Link href="/about">
-                  <Button variant="secondary">About Me</Button>
+                <Link href="/contact">
+                  <Button variant="secondary">START A PROJECT &rarr;</Button>
                 </Link>
               </div>
             </Reveal>
