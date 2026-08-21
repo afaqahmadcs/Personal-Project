@@ -17,7 +17,7 @@ export const BuildSection: React.FC<BuildSectionProps> = ({ project }) => {
           {/* Left Column: Tech Stack & Specs */}
           <div className="lg:col-span-5 space-y-6">
             <Reveal direction="up" delay={0.05}>
-              <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">05 / Build</span>
+              <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">05 / Development</span>
               <h2 className="font-display text-4xl uppercase mt-2 mb-4">Engineering</h2>
               <p className="font-sans text-sm text-text-muted leading-relaxed">
                 Technologies utilized during platform implementation. Every package dependency, modular class structure, and static route generation were aligned for optimal performance checks.

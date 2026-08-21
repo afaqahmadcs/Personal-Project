@@ -13,12 +13,12 @@ export const NarrativeSections: React.FC<NarrativeSectionsProps> = ({ project })
     <section className="relative w-full py-16 md:py-24 bg-background" aria-label="Project Case Study Narrative">
       <div className="mx-auto max-w-7xl px-6 md:px-12 space-y-20 md:space-y-28">
         
-        {/* SECTION 01: CONTEXT */}
+        {/* SECTION 01: OVERVIEW */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-baseline">
           <div className="lg:col-span-4">
             <Reveal direction="up" delay={0.05}>
-              <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">01 / Context</span>
-              <h2 className="font-display text-2xl uppercase mt-2">The Background</h2>
+              <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">01 / Overview</span>
+              <h2 className="font-display text-2xl uppercase mt-2">Overview</h2>
             </Reveal>
           </div>
           <div className="lg:col-span-8">
@@ -30,12 +30,12 @@ export const NarrativeSections: React.FC<NarrativeSectionsProps> = ({ project })
           </div>
         </div>
 
-        {/* SECTION 02: OBJECTIVE */}
+        {/* SECTION 02: PROBLEM / OBJECTIVE */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-baseline">
           <div className="lg:col-span-4">
             <Reveal direction="up" delay={0.05}>
-              <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">02 / Objective</span>
-              <h2 className="font-display text-2xl uppercase mt-2">The Intended Goal</h2>
+              <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">02 / Problem &amp; Objective</span>
+              <h2 className="font-display text-2xl uppercase mt-2">Problem / Objective</h2>
             </Reveal>
           </div>
           <div className="lg:col-span-8">
@@ -52,7 +52,7 @@ export const NarrativeSections: React.FC<NarrativeSectionsProps> = ({ project })
           <div className="lg:col-span-4">
             <Reveal direction="up" delay={0.05}>
               <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">03 / Approach</span>
-              <h2 className="font-display text-2xl uppercase mt-2">The Execution Path</h2>
+              <h2 className="font-display text-2xl uppercase mt-2">Approach</h2>
             </Reveal>
           </div>
           <div className="lg:col-span-8">
@@ -60,7 +60,7 @@ export const NarrativeSections: React.FC<NarrativeSectionsProps> = ({ project })
             <div className="space-y-6">
               <Reveal direction="up" delay={0.1}>
                 <p className="font-sans text-base text-text-muted leading-relaxed mb-6">
-                  Structuring the code base following a sequential implementation protocol to ensure build integrity:
+                  Structuring the codebase following a sequential implementation protocol to ensure build integrity:
                 </p>
               </Reveal>
               <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
@@ -77,29 +77,27 @@ export const NarrativeSections: React.FC<NarrativeSectionsProps> = ({ project })
           </div>
         </div>
 
-        {/* SECTION 08: LEARNED */}
-        {project.lessons && (
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-baseline">
-            <div className="lg:col-span-4">
-              <Reveal direction="up" delay={0.05}>
-                <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">08 / Lessons</span>
-                <h2 className="font-display text-2xl uppercase mt-2">Key Takeaways</h2>
-              </Reveal>
-            </div>
-            <div className="lg:col-span-8">
-              <Reveal direction="up" delay={0.1}>
-                <div className="border border-border-custom bg-surface-muted p-6 rounded-lg">
-                  <span className="font-mono text-[9px] uppercase tracking-wider text-accent font-bold mb-2 block">
-                    Building Through Practice
-                  </span>
-                  <p className="font-sans text-sm text-foreground leading-relaxed">
-                    {project.lessons}
-                  </p>
-                </div>
-              </Reveal>
-            </div>
+        {/* SECTION 07: RESULT / OUTCOME */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-baseline">
+          <div className="lg:col-span-4">
+            <Reveal direction="up" delay={0.05}>
+              <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold">07 / Outcome</span>
+              <h2 className="font-display text-2xl uppercase mt-2">Result / Outcome</h2>
+            </Reveal>
           </div>
-        )}
+          <div className="lg:col-span-8">
+            <Reveal direction="up" delay={0.1}>
+              <div className="border border-border-custom bg-surface-muted p-6 rounded-lg">
+                <span className="font-mono text-[9px] uppercase tracking-wider text-accent font-bold mb-2 block">
+                  Outcome Deliverables
+                </span>
+                <p className="font-sans text-sm text-foreground leading-relaxed">
+                  {project.result || "Successfully delivered a verified web component application showcasing structured interface designs, clean DOM rendering paths, and responsive parameters."}
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
 
       </div>
     </section>

@@ -40,10 +40,9 @@ export const ProjectMeta: React.FC<ProjectMetaProps> = ({ project }) => {
             </div>
           </Reveal>
 
-          {/* Metadata: Technologies */}
           <Reveal direction="up" delay={0.2}>
             <div className="space-y-1">
-              <span className="font-mono text-[9px] uppercase tracking-wider text-text-muted">Technologies</span>
+              <span className="font-mono text-[9px] uppercase tracking-wider text-text-muted">06 / Technology</span>
               <div className="flex flex-wrap gap-1 mt-1">
                 {project.technologies.slice(0, 3).map((tech) => (
                   <span key={tech} className="font-mono text-[8px] uppercase border border-border-custom px-1.5 py-0.5 rounded bg-surface">
