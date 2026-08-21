@@ -25,12 +25,35 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Afaq Ahmad",
+    "jobTitle": "AI & Full Stack Developer",
+    "url": "https://github.com/afaqahmadcs/Personal-Project",
+    "sameAs": [
+      "https://www.linkedin.com/in/afaqahmadcs/",
+      "https://github.com/afaqahmadcs"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Peshawar",
+      "addressCountry": "Pakistan"
+    }
+  };
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <ThemeProvider>
           <CustomCursor />
