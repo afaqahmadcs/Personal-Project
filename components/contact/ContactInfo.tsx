@@ -5,6 +5,8 @@ import { Reveal } from "@/components/motion/Reveal";
 import { CustomImage } from "@/components/media/CustomImage";
 import { Link } from "@/components/ui/Link";
 
+import { trackEvent } from "@/lib/analytics";
+
 export const ContactInfo: React.FC = () => {
   return (
     <div className="space-y-8">
@@ -49,6 +51,7 @@ export const ContactInfo: React.FC = () => {
                 href="https://wa.me/923189798577"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent("whatsapp_click")}
                 aria-label="Chat with Afaq Ahmad on WhatsApp"
                 className="font-mono text-sm font-semibold text-accent hover:underline"
               >
@@ -60,6 +63,7 @@ export const ContactInfo: React.FC = () => {
               <span className="font-mono text-[9px] uppercase tracking-wider text-text-muted block mb-1">LinkedIn</span>
               <a
                 href="https://www.linkedin.com/in/afaqahmadcs/"
+                onClick={() => trackEvent("linkedin_click")}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit Afaq Ahmad on LinkedIn"
@@ -73,6 +77,7 @@ export const ContactInfo: React.FC = () => {
               <span className="font-mono text-[9px] uppercase tracking-wider text-text-muted block mb-1">GitHub</span>
               <a
                 href="https://github.com/afaqahmadcs"
+                onClick={() => trackEvent("github_click")}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit Afaq Ahmad on GitHub"
@@ -91,6 +96,7 @@ export const ContactInfo: React.FC = () => {
               href="https://wa.me/923189798577"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent("whatsapp_click")}
               aria-label="Chat with Afaq Ahmad on WhatsApp"
               className="inline-flex items-center justify-center font-mono text-xs uppercase tracking-wider border border-accent bg-accent-soft text-accent px-6 py-3 rounded hover:bg-accent hover:text-background transition-all duration-300 w-full text-center"
             >
